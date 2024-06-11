@@ -7,13 +7,14 @@ namespace ConsoleApplication1
     {
         public TreeNode Root;
 
-        public TreeNode InsertInRoot(int data)
+        // Correction: zu void gemacht
+        public void InsertInRoot(int data)
         {
             Root = InsertRec(Root, data);
-            return Root;
         }
 
-        public TreeNode InsertRec(TreeNode root, int data)
+        //Correction: wurde privat und statisch gemacht
+        private static TreeNode InsertRec(TreeNode root, int data)
         {
             if (root == null)
             {
@@ -36,37 +37,30 @@ namespace ConsoleApplication1
         {
             if (root != null)
             {
-                BTreePrinter.Print(root);
+                BTreePrinter1.Print(root);
             }
         }
 
-        public void IsAVLTree(TreeNode node)
+        public void IsAvlTree(TreeNode node)
         {
-            bool AVLTree= true;
-            AVLTree= IsAVLTreeRec(node, AVLTree);
-            
-            //Gibt aus ob es generell ein AVL Baum ist
-            if (AVLTree)
-            {
-                Console.WriteLine("AVL: yes");
-            }
-            else
-            {
-                Console.WriteLine("AVL: no");
-            }
+            bool avlTree= IsAvlTreeRec(node);
+            string status = avlTree ? "AVL: yes" : "AVL: no";
+                Console.WriteLine(status);
         }
 
-        private bool IsAVLTreeRec(TreeNode node, bool AVLTree)
+        private static bool IsAvlTreeRec(TreeNode node)
         {
+            //Correction: AVLTree wird nicht mehr mitgegeben, sondern in der funktion definiert
+            bool avlTree = true;
             if (node == null)
-                return AVLTree;
+                return true;
 
-            //Niveauunterschied wird berechnet und Balancefaktoren ausgegeben
+            //Niveauunterschied wird berechnet und Balance Faktoren ausgegeben
             int balanceFactor = node.GetBalance(node);
             if (balanceFactor < -1 || balanceFactor > 1)
             {
                 Console.WriteLine("bal(" + node.Data + ") = " + balanceFactor + " (AVL violation!)");
-                AVLTree = false;
+                avlTree = false;
             }
             else
             {
@@ -74,9 +68,9 @@ namespace ConsoleApplication1
             }
 
             //Rekursive Überprüfung der weiteren Knoten
-            IsAVLTreeRec(node.Left, AVLTree);
-            IsAVLTreeRec(node.Right, AVLTree);
-            return AVLTree;
+            IsAvlTreeRec(node.Left);
+            IsAvlTreeRec(node.Right);
+            return avlTree;
         }
 
         public void SearchSubtree(Tree subtree)
@@ -219,7 +213,7 @@ namespace ConsoleApplication1
             if (node.Data > max)
                 max = node.Data;
 
-            // Addiert den Wert zum Gesamtsummenzähler
+            // Addiert den Wert zum Gesamtsummen Zähler
             sum += node.Data;
 
             // Zählt die Anzahl der Knoten

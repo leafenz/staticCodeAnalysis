@@ -4,7 +4,7 @@ namespace ConsoleApplication1
 {
     public class TreeNode
     {
-        public int Data;
+        public readonly int Data;
         public TreeNode Left;
         public TreeNode Right;
 

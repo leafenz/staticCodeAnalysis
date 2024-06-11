@@ -4,7 +4,7 @@ using System.IO;
 
 namespace ConsoleApplication1
 {
-    public class FileHandler
+    public class FileHandler1
     {
         public static Tree GetTreeFromFile(string inputFile)
         {
@@ -24,8 +24,8 @@ namespace ConsoleApplication1
                 int lineCounter = 1;
                 while ((line = sr.ReadLine()) != null)
                 {
-                    int input;
-                    if (int.TryParse(line, out input))
+                    //Correction Redundanzen
+                    if (int.TryParse(line, out int input))
                     {
                         tree.InsertInRoot(input);
                     }

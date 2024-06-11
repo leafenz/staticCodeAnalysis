@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ConsoleApplication1
 {
-    public class BTreePrinter
+    public class BTreePrinter1
     {
         class NodeInfo
         {
