@@ -1,0 +1,6 @@
+C:\Users\User\Desktop\Informatik 2.Semester\algos\2.ProgrammierbeispielTreeCheck\TreeCheck\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\User\Desktop\Informatik 2.Semester\algos\2.ProgrammierbeispielTreeCheck\TreeCheck\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\User\Desktop\Informatik 2.Semester\algos\2.ProgrammierbeispielTreeCheck\TreeCheck\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Informatik 2.Semester\algos\2.ProgrammierbeispielTreeCheck\TreeCheck\ConsoleApplication1\obj\Debug\ConsoleApplication1.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Informatik 2.Semester\algos\2.ProgrammierbeispielTreeCheck\TreeCheck\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\User\Desktop\Informatik 2.Semester\algos\2.ProgrammierbeispielTreeCheck\TreeCheck\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
